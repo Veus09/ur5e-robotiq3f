@@ -1,0 +1,161 @@
+format: "xrdf"
+
+format_version: 2.0
+
+default_joint_positions: 
+  shoulder_pan_joint: 0.0018
+  shoulder_lift_joint: -0.0003
+  elbow_joint: -0.0001
+  wrist_1_joint: -0.0
+  wrist_2_joint: 0.0
+  wrist_3_joint: 0.0017
+  palm_finger_1_joint: 0.0173
+  palm_finger_2_joint: 0.0173
+  finger_1_joint_1: 0.0496
+  finger_2_joint_1: 0.0496
+  finger_middle_joint_1: 0.0496
+  finger_1_joint_2: 0.0
+  finger_2_joint_2: 0.0
+  finger_middle_joint_2: 0.0
+  finger_1_joint_3: -0.0524
+  finger_2_joint_3: 0.0524
+  finger_middle_joint_3: -0.0524
+
+cspace: 
+  joint_names: 
+    - "shoulder_pan_joint"
+    - "shoulder_lift_joint"
+    - "elbow_joint"
+    - "wrist_1_joint"
+    - "wrist_2_joint"
+    - "wrist_3_joint"
+  acceleration_limits: [10.0, 10.0, 10.0, 10.0, 10.0, 10.0]
+  jerk_limits: [10000.0, 10000.0, 10000.0, 10000.0, 10000.0, 10000.0]
+tool_frames: ["wrist_3_link"]
+world_collision: 
+  geometry: "auto_generated_collision_sphere_group"
+
+self_collision: 
+  geometry: "auto_generated_collision_sphere_group"
+  ignore: 
+    base_link: 
+      - "base_link_inertia"
+    base_link_inertia: 
+      - "shoulder_link"
+    shoulder_link: 
+      - "upper_arm_link"
+    upper_arm_link: 
+      - "forearm_link"
+    forearm_link: 
+      - "wrist_1_link"
+    wrist_1_link: 
+      - "wrist_2_link"
+    wrist_2_link: 
+      - "wrist_3_link"
+    wrist_3_link: 
+      - "palm"
+    finger_1_link_0: 
+      - "finger_1_link_1"
+      - "finger_2_link_0"
+      - "finger_middle_link_0"
+    finger_1_link_1: 
+      - "finger_1_link_2"
+    finger_1_link_2: 
+      - "finger_1_link_3"
+    finger_2_link_0: 
+      - "finger_2_link_1"
+      - "finger_middle_link_0"
+    finger_2_link_1: 
+      - "finger_2_link_2"
+    finger_2_link_2: 
+      - "finger_2_link_3"
+    finger_middle_link_0: 
+      - "finger_middle_link_1"
+    finger_middle_link_1: 
+      - "finger_middle_link_2"
+    finger_middle_link_2: 
+      - "finger_middle_link_3"
+    palm: 
+      - "finger_1_link_0"
+      - "finger_2_link_0"
+      - "finger_middle_link_0"
+
+geometry: 
+  auto_generated_collision_sphere_group: 
+    spheres: 
+      Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link/wrist_1_link/wrist_2_link/wrist_3_link: 
+        - center: [-0.0, 0.004, -0.04]
+          radius: 0.0533
+      Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link/wrist_1_link/wrist_2_link: 
+        - center: [-0.0, -0.013, 0.0]
+          radius: 0.0586
+      Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link/wrist_1_link: 
+        - center: [-0.0, -0.009, -0.007]
+          radius: 0.0683
+      Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link: 
+        - center: [-0.062, 0.001, 0.012]
+          radius: 0.0786
+        - center: [-0.225, -0.0, 0.013]
+          radius: 0.0771
+        - center: [-0.155, -0.002, 0.013]
+          radius: 0.0771
+        - center: [-0.317, 0.0, -0.001]
+          radius: 0.0726
+        - center: [-0.386, -0.0, 0.021]
+          radius: 0.0686
+        - center: [-0.01, 0.001, 0.018]
+          radius: 0.0721
+        - center: [-0.268, 0.0, -0.001]
+          radius: 0.0741
+        - center: [-0.122, -0.0, 0.005]
+          radius: 0.0776
+      Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link: 
+        - center: [-0.183, 0.0, 0.15]
+          radius: 0.0895
+        - center: [-0.344, 0.0, 0.126]
+          radius: 0.0889
+        - center: [-0.03, 0.0, 0.146]
+          radius: 0.0889
+        - center: [-0.425, 0.0, 0.142]
+          radius: 0.0889
+        - center: [-0.27, -0.001, 0.151]
+          radius: 0.0889
+        - center: [-0.11, 0.0, 0.137]
+          radius: 0.0889
+        - center: [0.001, -0.0, 0.135]
+          radius: 0.0884
+        - center: [-0.226, -0.001, 0.123]
+          radius: 0.0878
+      Geometry/world/base_link/base_link_inertia/shoulder_link: 
+        - center: [-0.0, 0.0, -0.006]
+          radius: 0.0875
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_1_link_0/finger_1_link_1/finger_1_link_2/finger_1_link_3: 
+        - center: [0.002, -0.006, 0.001]
+          radius: 0.0307
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_1_link_0/finger_1_link_1/finger_1_link_2: 
+        - center: [-0.001, -0.014, -0.0]
+          radius: 0.0289
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_1_link_0/finger_1_link_1: 
+        - center: [0.008, -0.01, -0.0]
+          radius: 0.035
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_2_link_0/finger_2_link_1/finger_2_link_2/finger_2_link_3: 
+        - center: [0.002, -0.006, 0.001]
+          radius: 0.0307
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_2_link_0/finger_2_link_1/finger_2_link_2: 
+        - center: [-0.001, -0.014, -0.0]
+          radius: 0.0289
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_2_link_0/finger_2_link_1: 
+        - center: [0.008, -0.01, -0.0]
+          radius: 0.035
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_middle_link_0/finger_middle_link_1/finger_middle_link_2/finger_middle_link_3: 
+        - center: [0.002, -0.006, 0.001]
+          radius: 0.0307
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_middle_link_0/finger_middle_link_1/finger_middle_link_2: 
+        - center: [-0.001, -0.014, -0.0]
+          radius: 0.0289
+      robotiq_3f_gripper_articulated/Geometry/palm/finger_middle_link_0/finger_middle_link_1: 
+        - center: [0.008, -0.01, -0.0]
+          radius: 0.035
+      robotiq_3f_gripper_articulated/Geometry/palm: 
+        - center: [0.007, -0.002, -0.006]
+          radius: 0.0823

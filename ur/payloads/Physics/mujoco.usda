@@ -1,0 +1,330 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "ur"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpu_2hnoyg/ur.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_ur_7nuvo6dw/usdex_ur/ur.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_ur_7nuvo6dw/temp_ur/ur.usd
+
+
+Generated from Composed Stage of root layer /home/vuonggia/ur5eredodo/ur/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "ur"
+{
+    over "Physics"
+    {
+        def MjcActuator "shoulder_pan_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            custom rel mjc:target
+            prepend rel mjc:target = </ur/Physics/shoulder_pan_joint>
+        }
+
+        def MjcActuator "shoulder_lift_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            custom rel mjc:target
+            prepend rel mjc:target = </ur/Physics/shoulder_lift_joint>
+        }
+
+        def MjcActuator "elbow_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 150
+            uniform double mjc:forceRange:min = -150
+            custom rel mjc:target
+            prepend rel mjc:target = </ur/Physics/elbow_joint>
+        }
+
+        def MjcActuator "wrist_1_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 28
+            uniform double mjc:forceRange:min = -28
+            custom rel mjc:target
+            prepend rel mjc:target = </ur/Physics/wrist_1_joint>
+        }
+
+        def MjcActuator "wrist_2_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 28
+            uniform double mjc:forceRange:min = -28
+            custom rel mjc:target
+            prepend rel mjc:target = </ur/Physics/wrist_2_joint>
+        }
+
+        def MjcActuator "wrist_3_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 28
+            uniform double mjc:forceRange:min = -28
+            custom rel mjc:target
+            prepend rel mjc:target = </ur/Physics/wrist_3_joint>
+        }
+
+        over "base_joint"
+        {
+        }
+
+        over "tn__base_linkbase_link_inertia_kc0"
+        {
+        }
+
+        over "shoulder_pan_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "shoulder_lift_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "elbow_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wrist_1_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wrist_2_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "wrist_3_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "world"
+        {
+            over "base_link"
+            {
+                over "base_link_inertia"
+                {
+                    over "shoulder_link"
+                    {
+                        over "upper_arm_link"
+                        {
+                            over "forearm_link"
+                            {
+                                over "wrist_1_link"
+                                {
+                                    over "wrist_2_link"
+                                    {
+                                        over "wrist_3_link"
+                                        {
+                                            over "ft_frame"
+                                            {
+                                            }
+
+                                            over "wrist3"
+                                            {
+                                            }
+
+                                            over "wrist3_1"
+                                            {
+                                            }
+
+                                            over "flange"
+                                            {
+                                                over "tool0"
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "wrist2"
+                                        {
+                                            over "tn__eSeriesUR5e049_rEo6"
+                                            {
+                                            }
+
+                                            over "tn__eSeriesUR5e085_rEo6"
+                                            {
+                                            }
+
+                                            over "tn__eSeriesUR5e086_rEo6"
+                                            {
+                                            }
+                                        }
+
+                                        over "wrist2_1"
+                                        {
+                                        }
+                                    }
+
+                                    over "wrist1"
+                                    {
+                                        over "tn__eSeriesUR5e043_rEo6"
+                                        {
+                                        }
+
+                                        over "tn__eSeriesUR5e083_rEo6"
+                                        {
+                                        }
+
+                                        over "tn__eSeriesUR5e084_rEo6"
+                                        {
+                                        }
+                                    }
+
+                                    over "wrist1_1"
+                                    {
+                                    }
+                                }
+
+                                over "forearm"
+                                {
+                                    over "tn__eSeriesUR5e028_rEo6"
+                                    {
+                                    }
+
+                                    over "tn__eSeriesUR5e077_rEo6"
+                                    {
+                                    }
+
+                                    over "tn__eSeriesUR5e078_rEo6"
+                                    {
+                                    }
+
+                                    over "tn__eSeriesUR5e079_rEo6"
+                                    {
+                                    }
+
+                                    over "tn__eSeriesUR5e080_rEo6"
+                                    {
+                                    }
+
+                                    over "tn__eSeriesUR5e081_rEo6"
+                                    {
+                                    }
+
+                                    over "tn__eSeriesUR5e082_rEo6"
+                                    {
+                                    }
+                                }
+
+                                over "forearm_1"
+                                {
+                                }
+                            }
+
+                            over "upperarm"
+                            {
+                                over "tn__eSeriesUR5e069_rEo6"
+                                {
+                                }
+
+                                over "tn__eSeriesUR5e070_rEo6"
+                                {
+                                }
+
+                                over "tn__eSeriesUR5e071_rEo6"
+                                {
+                                }
+
+                                over "tn__eSeriesUR5e072_rEo6"
+                                {
+                                }
+
+                                over "tn__eSeriesUR5e073_rEo6"
+                                {
+                                }
+
+                                over "tn__eSeriesUR5e074_rEo6"
+                                {
+                                }
+
+                                over "tn__eSeriesUR5e075_rEo6"
+                                {
+                                }
+
+                                over "tn__eSeriesUR5e076_rEo6"
+                                {
+                                }
+                            }
+
+                            over "upperarm_1"
+                            {
+                            }
+                        }
+
+                        over "shoulder"
+                        {
+                            over "tn__eSeriesUR5e001_rEo6"
+                            {
+                            }
+
+                            over "tn__eSeriesUR5e067_rEo6"
+                            {
+                            }
+
+                            over "tn__eSeriesUR5e068_rEo6"
+                            {
+                            }
+                        }
+
+                        over "shoulder_1"
+                        {
+                        }
+                    }
+
+                    over "base"
+                    {
+                        over "tn__eSeriesUR5e013_rEo6"
+                        {
+                        }
+
+                        over "tn__eSeriesUR5e066_rEo6"
+                        {
+                        }
+                    }
+
+                    over "base_1"
+                    {
+                    }
+                }
+
+                over "base"
+                {
+                }
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

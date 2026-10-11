@@ -1,0 +1,1410 @@
+#usda 1.0
+(
+    customLayerData = {
+        dictionary cameraSettings = {
+            dictionary Front = {
+                double3 position = (5, 0, 0)
+                double radius = 5
+            }
+            dictionary Perspective = {
+                double3 position = (0.8523818264002445, 1.4520326809243382, 0.6450523747573252)
+                double3 target = (0.7150284583578845, 0.47380725227986265, 0.2879038000756258)
+            }
+            dictionary Right = {
+                double3 position = (0, -5, 0)
+                double radius = 5
+            }
+            dictionary Top = {
+                double3 position = (0, 0, 5)
+                double radius = 5
+            }
+            string boundCamera = "/OmniverseKit_Persp"
+        }
+        string creator = "URDF USD Converter v0.1.2"
+        dictionary omni_layer = {
+            string authoring_layer = "./robot.usd"
+            dictionary locked = {
+            }
+            dictionary muteness = {
+            }
+        }
+        dictionary renderSettings = {
+        }
+    }
+    defaultPrim = "ur"
+    doc = """Generated from Composed Stage of root layer /tmp/tmpu_2hnoyg/ur.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_ur_7nuvo6dw/usdex_ur/ur.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_ur_7nuvo6dw/temp_ur/ur.usd
+
+
+Generated from Composed Stage of root layer /home/vuonggia/ur5eredodo/ur/payloads/base.usd
+"""
+    endTimeCode = 0
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    startTimeCode = -1
+    subLayers = [
+        @../../robotiq-3f-gripper_articulated_redo/robotiq-3f-gripper_articulated/payloads/Physics/physics.usda@,
+        @./payloads/Physics/physx.usda@
+    ]
+    upAxis = "Z"
+)
+
+def Xform "ur" (
+    prepend references = @./payloads/base.usda@
+    variants = {
+        string Gripper = "base"
+        string Physics = "physx"
+    }
+    prepend variantSets = "Gripper"
+    append variantSets = "Physics"
+)
+{
+    prepend rel isaac:physics:robotJoints = [
+        </ur/Physics/base_joint>,
+        </ur/Physics/tn__base_linkbase_link_inertia_kc0>,
+        </ur/Physics/shoulder_pan_joint>,
+        </ur/Physics/shoulder_lift_joint>,
+        </ur/Physics/elbow_joint>,
+        </ur/Physics/wrist_1_joint>,
+        </ur/Physics/wrist_2_joint>,
+        </ur/Physics/wrist_3_joint>,
+        </ur/robotiq_3f_gripper_articulated/Geometry/palm/AssemblerFixedJoint>,
+        </ur/robotiq_3f_gripper_articulated>,
+    ]
+    prepend rel isaac:physics:robotLinks = [
+        </ur/Geometry/world/base_link>,
+        </ur/Geometry/world/base_link/base_link_inertia>,
+        </ur/Geometry/world/base_link/base_link_inertia/shoulder_link>,
+        </ur/Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link>,
+        </ur/Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link>,
+        </ur/Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link/wrist_1_link>,
+        </ur/Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link/wrist_1_link/wrist_2_link>,
+        </ur/Geometry/world/base_link/base_link_inertia/shoulder_link/upper_arm_link/forearm_link/wrist_1_link/wrist_2_link/wrist_3_link>,
+        </ur/robotiq_3f_gripper_articulated>,
+    ]
+
+    over "Geometry"
+    {
+        over "world"
+        {
+            over "base_link"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "base_link_inertia"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+
+                    over "shoulder_link"
+                    {
+                        string isaac:nameOverride (
+                            displayName = "Name Override"
+                        )
+
+                        over "upper_arm_link"
+                        {
+                            string isaac:nameOverride (
+                                displayName = "Name Override"
+                            )
+
+                            over "forearm_link"
+                            {
+                                string isaac:nameOverride (
+                                    displayName = "Name Override"
+                                )
+
+                                over "wrist_1_link"
+                                {
+                                    string isaac:nameOverride (
+                                        displayName = "Name Override"
+                                    )
+
+                                    over "wrist_2_link"
+                                    {
+                                        string isaac:nameOverride (
+                                            displayName = "Name Override"
+                                        )
+
+                                        over "wrist_3_link"
+                                        {
+                                            string isaac:nameOverride (
+                                                displayName = "Name Override"
+                                            )
+
+                                            over "ft_frame"
+                                            {
+                                                string isaac:Description (
+                                                    displayName = "Reference Description"
+                                                )
+                                                uniform token isaac:forwardAxis (
+                                                    displayName = "Forward Axis"
+                                                )
+                                            }
+
+                                            over "wrist3" (
+                                                instanceable = false
+                                            )
+                                            {
+                                                over "VisualMaterials"
+                                                {
+                                                    over "LinkGrey_2" (
+                                                        instanceable = false
+                                                    )
+                                                    {
+                                                    }
+                                                }
+                                            }
+
+                                            over "wrist3_1" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+
+                                        over "wrist2"
+                                        {
+                                            over "tn__eSeriesUR5e049_rEo6" (
+                                                instanceable = false
+                                            )
+                                            {
+                                                over "VisualMaterials"
+                                                {
+                                                    over "JointGrey_5" (
+                                                        instanceable = false
+                                                    )
+                                                    {
+                                                    }
+                                                }
+                                            }
+
+                                            over "tn__eSeriesUR5e085_rEo6" (
+                                                instanceable = false
+                                            )
+                                            {
+                                                over "VisualMaterials"
+                                                {
+                                                    over "URBlue_4" (
+                                                        instanceable = false
+                                                    )
+                                                    {
+                                                    }
+                                                }
+                                            }
+
+                                            over "tn__eSeriesUR5e086_rEo6" (
+                                                instanceable = false
+                                            )
+                                            {
+                                                over "VisualMaterials"
+                                                {
+                                                    over "Black_5" (
+                                                        instanceable = false
+                                                    )
+                                                    {
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        over "wrist2_1" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+
+                                    over "wrist1"
+                                    {
+                                        over "tn__eSeriesUR5e043_rEo6" (
+                                            instanceable = false
+                                        )
+                                        {
+                                            over "VisualMaterials"
+                                            {
+                                                over "JointGrey_4" (
+                                                    instanceable = false
+                                                )
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "tn__eSeriesUR5e083_rEo6" (
+                                            instanceable = false
+                                        )
+                                        {
+                                            over "VisualMaterials"
+                                            {
+                                                over "URBlue_3" (
+                                                    instanceable = false
+                                                )
+                                                {
+                                                }
+                                            }
+                                        }
+
+                                        over "tn__eSeriesUR5e084_rEo6" (
+                                            instanceable = false
+                                        )
+                                        {
+                                            over "VisualMaterials"
+                                            {
+                                                over "Black_4" (
+                                                    instanceable = false
+                                                )
+                                                {
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    over "wrist1_1" (
+                                        instanceable = false
+                                    )
+                                    {
+                                    }
+                                }
+
+                                over "forearm"
+                                {
+                                    over "tn__eSeriesUR5e028_rEo6" (
+                                        instanceable = false
+                                    )
+                                    {
+                                        over "VisualMaterials"
+                                        {
+                                            over "JointGrey_3" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+                                    }
+
+                                    over "tn__eSeriesUR5e077_rEo6" (
+                                        instanceable = false
+                                    )
+                                    {
+                                        over "VisualMaterials"
+                                        {
+                                            over "JointGrey_3" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+                                    }
+
+                                    over "tn__eSeriesUR5e078_rEo6" (
+                                        instanceable = false
+                                    )
+                                    {
+                                        over "VisualMaterials"
+                                        {
+                                            over "Black_3" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+                                    }
+
+                                    over "tn__eSeriesUR5e079_rEo6" (
+                                        instanceable = false
+                                    )
+                                    {
+                                        over "VisualMaterials"
+                                        {
+                                            over "LinkGrey_1" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+                                    }
+
+                                    over "tn__eSeriesUR5e080_rEo6" (
+                                        instanceable = false
+                                    )
+                                    {
+                                        over "VisualMaterials"
+                                        {
+                                            over "Black_3" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+                                    }
+
+                                    over "tn__eSeriesUR5e081_rEo6" (
+                                        instanceable = false
+                                    )
+                                    {
+                                        over "VisualMaterials"
+                                        {
+                                            over "URBlue_2" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+                                    }
+
+                                    over "tn__eSeriesUR5e082_rEo6" (
+                                        instanceable = false
+                                    )
+                                    {
+                                        over "VisualMaterials"
+                                        {
+                                            over "Black_3" (
+                                                instanceable = false
+                                            )
+                                            {
+                                            }
+                                        }
+                                    }
+                                }
+
+                                over "forearm_1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+
+                            over "upperarm"
+                            {
+                                over "tn__eSeriesUR5e069_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "URBlue_1" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "tn__eSeriesUR5e070_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "JointGrey_2" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "tn__eSeriesUR5e071_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "Black_2" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "tn__eSeriesUR5e072_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "URBlue_1" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "tn__eSeriesUR5e073_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "LinkGrey" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "tn__eSeriesUR5e074_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "Black_2" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "tn__eSeriesUR5e075_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "JointGrey_2" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "tn__eSeriesUR5e076_rEo6" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "Black_2" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+
+                            over "upperarm_1" (
+                                instanceable = false
+                            )
+                            {
+                            }
+                        }
+
+                        over "shoulder"
+                        {
+                            over "tn__eSeriesUR5e001_rEo6" (
+                                instanceable = false
+                            )
+                            {
+                                over "VisualMaterials"
+                                {
+                                    over "JointGrey_1" (
+                                        instanceable = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+
+                            over "tn__eSeriesUR5e067_rEo6" (
+                                instanceable = false
+                            )
+                            {
+                                over "VisualMaterials"
+                                {
+                                    over "Black_1" (
+                                        instanceable = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+
+                            over "tn__eSeriesUR5e068_rEo6" (
+                                instanceable = false
+                            )
+                            {
+                                over "VisualMaterials"
+                                {
+                                    over "URBlue" (
+                                        instanceable = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+                        }
+
+                        over "shoulder_1" (
+                            instanceable = false
+                        )
+                        {
+                        }
+                    }
+
+                    over "base"
+                    {
+                        over "tn__eSeriesUR5e013_rEo6" (
+                            instanceable = false
+                        )
+                        {
+                            over "VisualMaterials"
+                            {
+                                over "JointGrey" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+                        }
+
+                        over "tn__eSeriesUR5e066_rEo6" (
+                            instanceable = false
+                        )
+                        {
+                            over "VisualMaterials"
+                            {
+                                over "Black" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+                        }
+                    }
+
+                    over "base_1" (
+                        instanceable = false
+                    )
+                    {
+                    }
+                }
+
+                over "base"
+                {
+                    string isaac:Description (
+                        displayName = "Reference Description"
+                    )
+                    uniform token isaac:forwardAxis (
+                        displayName = "Forward Axis"
+                    )
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        over "shoulder_pan_joint"
+        {
+            float drive:angular:physics:damping = 0.378
+            float drive:angular:physics:stiffness = 9400.501
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "shoulder_lift_joint"
+        {
+            float drive:angular:physics:damping = 0.41168
+            float drive:angular:physics:stiffness = 10020.92
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "elbow_joint"
+        {
+            float drive:angular:physics:damping = 4.09288
+            float drive:angular:physics:stiffness = 10230.221
+            float physics:lowerLimit = -180
+            float physics:upperLimit = 180
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "wrist_1_joint"
+        {
+            float drive:angular:physics:damping = 1.57851
+            float drive:angular:physics:stiffness = 3940.629
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "wrist_2_joint"
+        {
+            float drive:angular:physics:damping = 0.06109
+            float drive:angular:physics:stiffness = 3940.629
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+
+        over "wrist_3_joint"
+        {
+            float drive:angular:physics:damping = 0.00432
+            float drive:angular:physics:stiffness = 1000.0809
+            float physics:lowerLimit = -360
+            float physics:upperLimit = 360
+            float state:angular:physics:position = 0
+            float state:angular:physics:velocity = 0
+        }
+    }
+
+    over "robotiq_3f_gripper_articulated"
+    {
+        over "Geometry" (
+            delete apiSchemas = ["NewtonArticulationRootAPI", "PhysicsArticulationRootAPI"]
+        )
+        {
+            over "palm"
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+
+                over "finger_1_link_0"
+                {
+                    over "finger_1_link_1"
+                    {
+                        over "finger_1_link_2"
+                        {
+                            over "finger_1_link_3"
+                            {
+                                string isaac:nameOverride (
+                                    displayName = "Name Override"
+                                )
+
+                                over "link_3" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "Material_001_3" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "link_3_1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+
+                            over "link_2" (
+                                instanceable = false
+                            )
+                            {
+                                over "VisualMaterials"
+                                {
+                                    over "Material_001_2" (
+                                        instanceable = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+
+                            over "link_2_1" (
+                                instanceable = false
+                            )
+                            {
+                            }
+                        }
+
+                        over "link_1" (
+                            instanceable = false
+                        )
+                        {
+                            over "VisualMaterials"
+                            {
+                                over "Material_001_1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+                        }
+
+                        over "link_1_1" (
+                            instanceable = false
+                        )
+                        {
+                        }
+                    }
+
+                    over "link_0" (
+                        instanceable = false
+                    )
+                    {
+                        over "VisualMaterials"
+                        {
+                            over "Material_001" (
+                                instanceable = false
+                            )
+                            {
+                            }
+                        }
+                    }
+
+                    over "link_0_1" (
+                        instanceable = false
+                    )
+                    {
+                    }
+                }
+
+                over "finger_2_link_0"
+                {
+                    over "finger_2_link_1"
+                    {
+                        over "finger_2_link_2"
+                        {
+                            over "finger_2_link_3"
+                            {
+                                over "link_3" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "Material_001_3" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "link_3_1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+
+                            over "link_2" (
+                                instanceable = false
+                            )
+                            {
+                                over "VisualMaterials"
+                                {
+                                    over "Material_001_2" (
+                                        instanceable = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+
+                            over "link_2_1" (
+                                instanceable = false
+                            )
+                            {
+                            }
+                        }
+
+                        over "link_1" (
+                            instanceable = false
+                        )
+                        {
+                            over "VisualMaterials"
+                            {
+                                over "Material_001_1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+                        }
+
+                        over "link_1_1" (
+                            instanceable = false
+                        )
+                        {
+                        }
+                    }
+
+                    over "link_0" (
+                        instanceable = false
+                    )
+                    {
+                        over "VisualMaterials"
+                        {
+                            over "Material_001" (
+                                instanceable = false
+                            )
+                            {
+                            }
+                        }
+                    }
+
+                    over "link_0_1" (
+                        instanceable = false
+                    )
+                    {
+                    }
+                }
+
+                over "finger_middle_link_0"
+                {
+                    string isaac:nameOverride (
+                        displayName = "Name Override"
+                    )
+
+                    over "finger_middle_link_1"
+                    {
+                        over "finger_middle_link_2"
+                        {
+                            over "finger_middle_link_3"
+                            {
+                                over "link_3" (
+                                    instanceable = false
+                                )
+                                {
+                                    over "VisualMaterials"
+                                    {
+                                        over "Material_001_3" (
+                                            instanceable = false
+                                        )
+                                        {
+                                        }
+                                    }
+                                }
+
+                                over "link_3_1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+
+                            over "link_2" (
+                                instanceable = false
+                            )
+                            {
+                                over "VisualMaterials"
+                                {
+                                    over "Material_001_2" (
+                                        instanceable = false
+                                    )
+                                    {
+                                    }
+                                }
+                            }
+
+                            over "link_2_1" (
+                                instanceable = false
+                            )
+                            {
+                            }
+                        }
+
+                        over "link_1" (
+                            instanceable = false
+                        )
+                        {
+                            over "VisualMaterials"
+                            {
+                                over "Material_001_1" (
+                                    instanceable = false
+                                )
+                                {
+                                }
+                            }
+                        }
+
+                        over "link_1_1" (
+                            instanceable = false
+                        )
+                        {
+                        }
+                    }
+
+                    over "link_0" (
+                        instanceable = false
+                    )
+                    {
+                        over "VisualMaterials"
+                        {
+                            over "Material_001" (
+                                instanceable = false
+                            )
+                            {
+                            }
+                        }
+                    }
+
+                    over "link_0_1" (
+                        instanceable = false
+                    )
+                    {
+                    }
+                }
+
+                over "palm" (
+                    instanceable = false
+                )
+                {
+                    over "VisualMaterials"
+                    {
+                        over "Material_001_4" (
+                            instanceable = false
+                        )
+                        {
+                        }
+                    }
+                }
+
+                over "palm_1" (
+                    instanceable = false
+                )
+                {
+                }
+
+                over "AssemblerFixedJoint" (
+                    prepend apiSchemas = ["IsaacJointAPI"]
+                )
+                {
+                }
+            }
+        }
+
+        over "Physics"
+        {
+            over "palm_finger_1_joint"
+            {
+                float drive:angular:physics:targetPosition = 0
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = -10.22
+                float physics:upperLimit = 11
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "palm_finger_2_joint"
+            {
+                float drive:angular:physics:targetPosition = 0
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = -11
+                float physics:upperLimit = 10.22
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_1_joint_1"
+            {
+                float drive:angular:physics:targetPosition = 2.8
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = 2.84
+                float physics:upperLimit = 70
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_2_joint_1"
+            {
+                float drive:angular:physics:targetPosition = 2.8
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = 2.84
+                float physics:upperLimit = 70
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_middle_joint_1"
+            {
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = 2.84
+                float physics:upperLimit = 70
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_1_joint_2"
+            {
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = 0
+                float physics:upperLimit = 90
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_2_joint_2"
+            {
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = 0
+                float physics:upperLimit = 90
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_middle_joint_2"
+            {
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = 0
+                float physics:upperLimit = 90
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_1_joint_3"
+            {
+                float drive:angular:physics:targetPosition = -3
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = -70
+                float physics:upperLimit = -3
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_2_joint_3"
+            {
+                float drive:angular:physics:targetPosition = 3
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = 3
+                float physics:upperLimit = 70
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+
+            over "finger_middle_joint_3"
+            {
+                bool[] isaac:actuator (
+                    displayName = "Actuator"
+                )
+                string isaac:NameOverride (
+                    displayName = "Joint Name Override"
+                )
+                token[] isaac:physics:DofOffsetOpOrder (
+                    displayName = "Dof Offset Op Order"
+                )
+                float physics:lowerLimit = -70
+                float physics:upperLimit = -3
+                float state:angular:physics:position = 0
+                float state:angular:physics:velocity = 0
+            }
+        }
+    }
+    variantSet "Physics" = {
+        "mujoco" (
+            prepend payload = @./payloads/Physics/mujoco.usda@
+        ) {
+
+        }
+        "none" {
+
+        }
+        "physics" (
+            prepend payload = @./payloads/Physics/physics.usda@
+        ) {
+
+        }
+        "physx" (
+            prepend payload = @./payloads/Physics/physx.usda@
+        ) {
+
+        }
+    }
+    variantSet "Gripper" = {
+        "None" {
+
+        }
+        "base" (
+            prepend payload = @./payloads/Gripper/base.usd@
+        ) {
+            prepend rel isaac:physics:robotJoints = </ur/robotiq_3f_gripper_articulated>
+            prepend rel isaac:physics:robotLinks = </ur/robotiq_3f_gripper_articulated>
+
+        }
+    }
+}
+
+def "Render" (
+    hide_in_stage_window = true
+    no_delete = true
+)
+{
+    def "OmniverseKit"
+    {
+        def "HydraTextures" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            def RenderProduct "omni_kit_widget_viewport_ViewportTexture_0" (
+                prepend apiSchemas = ["OmniRtxSettingsCommonAdvancedAPI_1", "OmniRtxSettingsRtAdvancedAPI_1", "OmniRtxSettingsPtAdvancedAPI_1", "OmniRtxPostColorGradingAPI_1", "OmniRtxPostChromaticAberrationAPI_1", "OmniRtxPostBloomPhysicalAPI_1", "OmniRtxPostMatteObjectAPI_1", "OmniRtxPostCompositingAPI_1", "OmniRtxPostDofAPI_1", "OmniRtxPostMotionBlurAPI_1", "OmniRtxPostTvNoiseAPI_1", "OmniRtxPostTonemapIrayReinhardAPI_1", "OmniRtxPostDebugSettingsAPI_1", "OmniRtxDebugSettingsAPI_1"]
+                hide_in_stage_window = true
+                no_delete = true
+            )
+            {
+                rel camera = </OmniverseKit_Persp>
+                token omni:rtx:ambientOcclusion:denoiserMode = "none"
+                token omni:rtx:background:source:texture:textureMode = "repeatMirrored"
+                token omni:rtx:background:source:type = "domeLight"
+                bool omni:rtx:debug:view:pixelDebug:enableFixedTextPos = 1
+                token omni:rtx:directLighting:sampledLighting:denoisingTechnique = "None"
+                bool omni:rtx:dlss:frameGeneration = 0
+                float3 omni:rtx:domeLight:rotationAxis = (0, 0, 1)
+                bool omni:rtx:indirectDiffuse:denoiser:enabled = 0
+                bool omni:rtx:material:db:syncLoads = 1
+                token omni:rtx:post:dlss:execMode = "performance"
+                bool omni:rtx:post:registeredCompositing:invertColorCorrection = 1
+                bool omni:rtx:post:registeredCompositing:invertToneMap = 1
+                bool omni:rtx:pt:adaptiveSampling:filterError = 0
+                uint omni:rtx:pt:adaptiveSampling:fixedSppIterations = 2
+                uint omni:rtx:pt:maxSamplesPerLaunch = 2073600
+                uint omni:rtx:pt:mgpu:maxPixelsPerRegionExponent = 12
+                bool omni:rtx:reflections:denoiser:enabled = 0
+                token omni:rtx:rendermode = "RealTimePathTracing"
+                color3f omni:rtx:rt:ambientLight:color = (0.1, 0.1, 0.1)
+                bool omni:rtx:rt:demoire = 0
+                bool omni:rtx:rt:ecoMode:enabled
+                bool omni:rtx:rt:lightcache:spatialCache:dontResolveConflicts = 1
+                int omni:rtx:rt:sss:samples = 1
+                uint omni:rtx:rtpt:maxVolumeBounces = 15
+                float omni:rtx:rtpt:modulatingRoughnessThreshold = 0.08
+                bool omni:rtx:scene:hydra:materialSyncLoads = 1
+                bool omni:rtx:scene:hydra:mdlMaterialWarmup = 1
+                rel orderedVars = </Render/Vars/LdrColor>
+                custom bool overrideClipRange = 0
+                uniform int2 resolution = (1280, 720)
+            }
+        }
+    }
+
+    def RenderSettings "OmniverseGlobalRenderSettings" (
+        prepend apiSchemas = ["OmniRtxSettingsGlobalRtAdvancedAPI_1", "OmniRtxSettingsGlobalPtAdvancedAPI_1"]
+        no_delete = true
+    )
+    {
+        rel products = </Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0>
+    }
+
+    def "Vars"
+    {
+        def RenderVar "LdrColor" (
+            hide_in_stage_window = true
+            no_delete = true
+        )
+        {
+            uniform string sourceName = "LdrColor"
+            uniform token sourceType = "raw"
+        }
+    }
+}
+
+over "OmniverseKit_Persp" (
+    prepend apiSchemas = ["OmniRtxCameraAutoExposureAPI_1", "OmniRtxCameraExposureAPI_1"]
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (0.01, 10000000)
+    float exposure:fStop = 5
+    float exposure:responsivity = 1.1026709
+    float exposure:time = 0.02
+    float focalLength = 18.147562
+    float focusDistance = 400
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -1.0504027995756757)
+    float3 xformOp:rotateXYZ = (70.12245, -5.470554e-13, 172.00731)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0.8523818264002445, 1.4520326809243382, 0.6450523747573252)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+def PhysicsScene "PhysicsScene" (
+    prepend apiSchemas = ["NewtonSceneAPI", "PhysxSceneAPI"]
+)
+{
+}
+
+over "OmniverseKit_Front" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (90, -1.2722219e-14, 90)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (5, 0, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+over "OmniverseKit_Right" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (90, -1.41245e-30, 1.2722219e-14)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, -5, 0)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
+over "OmniverseKit_Top" (
+    customData = {
+        dictionary omni = {
+            dictionary kit = {
+                bool hide_in_stage_window = 1
+                bool no_delete = 1
+            }
+        }
+    }
+    hide_in_stage_window = true
+    kind = "component"
+    no_delete = true
+)
+{
+    float2 clippingRange = (1, 10000000)
+    float horizontalAperture = 50
+    custom uniform vector3d omni:kit:centerOfInterest = (0, 0, -5)
+    token projection = "orthographic"
+    float verticalAperture = 50
+    float3 xformOp:rotateXYZ = (-1.2722219e-14, -7.016709e-15, -90)
+    float3 xformOp:scale = (1, 1, 1)
+    double3 xformOp:translate = (0, 0, 5)
+    uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotateXYZ", "xformOp:scale"]
+}
+
