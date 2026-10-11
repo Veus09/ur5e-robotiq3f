@@ -1,0 +1,658 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "tn__robotiq3fgripper_articulated_ff0A"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp0l7r4aod/robotiq-3f-gripper_articulated.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq-3f-gripper_articulated_l3z4jvxp/usdex_robotiq-3f-gripper_articulated/robotiq-3f-gripper_articulated.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq-3f-gripper_articulated_l3z4jvxp/temp_robotiq-3f-gripper_articulated/robotiq-3f-gripper_articulated.usd
+
+
+Generated from Composed Stage of root layer /home/vuonggia/robotiq-3f-gripper_articulated/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+over "tn__robotiq3fgripper_articulated_ff0A"
+{
+    over "Geometry" (
+        prepend apiSchemas = ["PhysicsArticulationRootAPI", "NewtonArticulationRootAPI"]
+    )
+    {
+        bool newton:selfCollisionEnabled = 1
+
+        over "palm" (
+            prepend apiSchemas = ["PhysicsRigidBodyAPI"]
+        )
+        {
+            over "finger_1_link_0" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0, 0, 0)
+                float3 physics:diagonalInertia = (0.0007999565, 0.0009999889, 0.010000055)
+                float physics:mass = 0.05
+                quatf physics:principalAxes = (0.50084835, -0.5002379, -0.49920586, -0.49970642)
+
+                over "finger_1_link_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0, 0, 0)
+                    float3 physics:diagonalInertia = (0.0018446315, 0.00240141, 0.012768959)
+                    float physics:mass = 0.15
+                    quatf physics:principalAxes = (0.7071173, -0.7064385, -0.029969195, 0.0056195683)
+
+                    over "finger_1_link_2" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0, 0, 0)
+                        float3 physics:diagonalInertia = (0.0018446315, 0.00240141, 0.012768959)
+                        float physics:mass = 0.15
+                        quatf physics:principalAxes = (0.7071173, -0.7064385, -0.029969195, 0.0056195683)
+
+                        over "finger_1_link_3" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (0, 0, 0)
+                            float3 physics:diagonalInertia = (0.0007268833, 0.0013609659, 0.0016331507)
+                            float physics:mass = 0.05
+                            quatf physics:principalAxes = (0.024215952, 0.84828913, 0.5285805, -0.020537885)
+
+                            over "link_3" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+
+                            over "link_3_1" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+                        }
+
+                        over "link_2" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+
+                        over "link_2_1" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+                    }
+
+                    over "link_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+
+                    over "link_1_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+
+                over "link_0" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "link_0_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+            }
+
+            over "finger_2_link_0" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                point3f physics:centerOfMass = (0, 0, 0)
+                float3 physics:diagonalInertia = (0.0007999565, 0.0009999889, 0.010000055)
+                float physics:mass = 0.05
+                quatf physics:principalAxes = (0.50084835, -0.5002379, -0.49920586, -0.49970642)
+
+                over "finger_2_link_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0, 0, 0)
+                    float3 physics:diagonalInertia = (0.0018446315, 0.00240141, 0.012768959)
+                    float physics:mass = 0.15
+                    quatf physics:principalAxes = (0.7071173, -0.7064385, -0.029969195, 0.0056195683)
+
+                    over "finger_2_link_2" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0, 0, 0)
+                        float3 physics:diagonalInertia = (0.0018446315, 0.00240141, 0.012768959)
+                        float physics:mass = 0.15
+                        quatf physics:principalAxes = (0.7071173, -0.7064385, -0.029969195, 0.0056195683)
+
+                        over "finger_2_link_3" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (0, 0, 0)
+                            float3 physics:diagonalInertia = (0.0007268833, 0.0013609659, 0.0016331507)
+                            float physics:mass = 0.05
+                            quatf physics:principalAxes = (0.024215952, 0.84828913, 0.5285805, -0.020537885)
+
+                            over "link_3_1" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+
+                            over "link_3" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+                        }
+
+                        over "link_2_1" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+
+                        over "link_2" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+                    }
+
+                    over "link_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+
+                    over "link_1_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+
+                over "link_0_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "link_0" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+            }
+
+            over "finger_middle_link_0" (
+                prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+            )
+            {
+                string isaac:nameOverride (
+                    displayName = "Name Override"
+                )
+                point3f physics:centerOfMass = (0, 0, 0)
+                float3 physics:diagonalInertia = (0.0007999565, 0.0009999889, 0.010000055)
+                float physics:mass = 0.05
+                quatf physics:principalAxes = (0.50084835, -0.5002379, -0.49920586, -0.49970642)
+
+                over "finger_middle_link_1" (
+                    prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                )
+                {
+                    point3f physics:centerOfMass = (0, 0, 0)
+                    float3 physics:diagonalInertia = (0.0018446315, 0.00240141, 0.012768959)
+                    float physics:mass = 0.15
+                    quatf physics:principalAxes = (0.7071173, -0.7064385, -0.029969195, 0.0056195683)
+
+                    over "finger_middle_link_2" (
+                        prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                    )
+                    {
+                        point3f physics:centerOfMass = (0, 0, 0)
+                        float3 physics:diagonalInertia = (0.0018446315, 0.00240141, 0.012768959)
+                        float physics:mass = 0.15
+                        quatf physics:principalAxes = (0.7071173, -0.7064385, -0.029969195, 0.0056195683)
+
+                        over "finger_middle_link_3" (
+                            prepend apiSchemas = ["PhysicsRigidBodyAPI", "PhysicsMassAPI"]
+                        )
+                        {
+                            point3f physics:centerOfMass = (0, 0, 0)
+                            float3 physics:diagonalInertia = (0.0007268833, 0.0013609659, 0.0016331507)
+                            float physics:mass = 0.05
+                            quatf physics:principalAxes = (0.024215952, 0.84828913, 0.5285805, -0.020537885)
+
+                            over "link_3" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+
+                            over "link_3_1" (
+                                prepend apiSchemas = ["MaterialBindingAPI"]
+                            )
+                            {
+                                rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                    bindMaterialAs = "weakerThanDescendants"
+                                )
+                            }
+                        }
+
+                        over "link_2" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+
+                        over "link_2_1" (
+                            prepend apiSchemas = ["MaterialBindingAPI"]
+                        )
+                        {
+                            rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                                bindMaterialAs = "weakerThanDescendants"
+                            )
+                        }
+                    }
+
+                    over "link_1_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+
+                    over "link_1" (
+                        prepend apiSchemas = ["MaterialBindingAPI"]
+                    )
+                    {
+                        rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                            bindMaterialAs = "weakerThanDescendants"
+                        )
+                    }
+                }
+
+                over "link_0" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+
+                over "link_0_1" (
+                    prepend apiSchemas = ["MaterialBindingAPI"]
+                )
+                {
+                    rel material:binding = </tn__robotiq3fgripper_articulated_ff0A/PhysicsMaterial> (
+                        bindMaterialAs = "weakerThanDescendants"
+                    )
+                }
+            }
+        }
+    }
+
+    over "Physics"
+    {
+        def PhysicsRevoluteJoint "finger_1_joint_1" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            bool[] isaac:actuator (
+                displayName = "Actuator"
+            )
+            string isaac:NameOverride (
+                displayName = "Joint Name Override"
+            )
+            token[] isaac:physics:DofOffsetOpOrder (
+                displayName = "Dof Offset Op Order"
+            )
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_1_link_0>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_1_link_0/finger_1_link_1>
+            point3f physics:localPos0 = (0.02, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_1_joint_2" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            bool[] isaac:actuator (
+                displayName = "Actuator"
+            )
+            string isaac:NameOverride (
+                displayName = "Joint Name Override"
+            )
+            token[] isaac:physics:DofOffsetOpOrder (
+                displayName = "Dof Offset Op Order"
+            )
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_1_link_0/finger_1_link_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_1_link_0/finger_1_link_1/finger_1_link_2>
+            point3f physics:localPos0 = (0.05, -0.028, -6.938894e-18)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.96638995, -1.2196216e-17, -1.22042625e-17, -0.25708064)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_1_joint_3" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_1_link_0/finger_1_link_1/finger_1_link_2>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_1_link_0/finger_1_link_1/finger_1_link_2/finger_1_link_3>
+            point3f physics:localPos0 = (0.039, -6.938894e-18, 1.3877788e-17)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_2_joint_1" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_2_link_0>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_2_link_0/finger_2_link_1>
+            point3f physics:localPos0 = (0.02, 0, -6.938894e-18)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_2_joint_2" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_2_link_0/finger_2_link_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_2_link_0/finger_2_link_1/finger_2_link_2>
+            point3f physics:localPos0 = (0.05, -0.028, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.96638995, -1.2196216e-17, -1.22042625e-17, -0.25708064)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_2_joint_3" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_2_link_0/finger_2_link_1/finger_2_link_2>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_2_link_0/finger_2_link_1/finger_2_link_2/finger_2_link_3>
+            point3f physics:localPos0 = (0.039, -6.938894e-18, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_middle_joint_1" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_middle_link_0>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_middle_link_0/finger_middle_link_1>
+            point3f physics:localPos0 = (0.02, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_middle_joint_2" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_middle_link_0/finger_middle_link_1>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_middle_link_0/finger_middle_link_1/finger_middle_link_2>
+            point3f physics:localPos0 = (0.05, -0.028, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.96638995, 0, 0, -0.25708064)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "finger_middle_joint_3" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 200
+            uniform token physics:axis = "Z"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_middle_link_0/finger_middle_link_1/finger_middle_link_2>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_middle_link_0/finger_middle_link_1/finger_middle_link_2/finger_middle_link_3>
+            point3f physics:localPos0 = (0.039, -1.0408341e-17, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = 0
+            float physics:upperLimit = 180.00043
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "palm_finger_1_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "Y"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_1_link_0>
+            point3f physics:localPos0 = (-0.0455, 0.0214, 0.036)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (-0.0000025983823, 0.7068252, 0.7073883, 0.0000025963138)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -9.167325
+            float physics:upperLimit = 14.323945
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsRevoluteJoint "palm_finger_2_joint" (
+            prepend apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+            float drive:angular:physics:maxForce = 100
+            uniform token physics:axis = "Y"
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_2_link_0>
+            point3f physics:localPos0 = (-0.0455, 0.0214, -0.036)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (-0.0000025983823, 0.7068252, 0.7073883, 0.0000025963138)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+            float physics:lowerLimit = -14.323945
+            float physics:upperLimit = 9.167325
+            custom float urdf:limit:effort = 100
+            custom float urdf:limit:velocity = 100
+        }
+
+        def PhysicsFixedJoint "root_joint"
+        {
+            bool[] isaac:actuator (
+                displayName = "Actuator"
+            )
+            string isaac:NameOverride (
+                displayName = "Joint Name Override"
+            )
+            token[] isaac:physics:DofOffsetOpOrder (
+                displayName = "Dof Offset Op Order"
+            )
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm>
+            point3f physics:localPos0 = (0, 0, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (1, 0, 0, 0)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+
+        def PhysicsFixedJoint "palm_finger_middle_joint"
+        {
+            custom rel physics:body0
+            prepend rel physics:body0 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm>
+            custom rel physics:body1
+            prepend rel physics:body1 = </tn__robotiq3fgripper_articulated_ff0A/Geometry/palm/finger_middle_link_0>
+            point3f physics:localPos0 = (0.0455, 0.0214, 0)
+            point3f physics:localPos1 = (0, 0, 0)
+            quatf physics:localRot0 = (0.7073883, 0, 0, 0.7068252)
+            quatf physics:localRot1 = (1, 0, 0, 0)
+        }
+    }
+
+    def Material "PhysicsMaterial" (
+        prepend apiSchemas = ["PhysicsMaterialAPI"]
+    )
+    {
+        float physics:dynamicFriction = 1
+        float physics:staticFriction = 1
+    }
+}
+

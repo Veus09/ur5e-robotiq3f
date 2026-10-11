@@ -1,0 +1,347 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    defaultPrim = "tn__robotiq3fgripper_articulated_ff0A"
+    doc = """Generated from Composed Stage of root layer /tmp/tmp0l7r4aod/robotiq-3f-gripper_articulated.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq-3f-gripper_articulated_l3z4jvxp/usdex_robotiq-3f-gripper_articulated/robotiq-3f-gripper_articulated.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq-3f-gripper_articulated_l3z4jvxp/temp_robotiq-3f-gripper_articulated/robotiq-3f-gripper_articulated.usd
+
+
+Generated from Composed Stage of root layer /home/vuonggia/robotiq-3f-gripper_articulated/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    subLayers = [
+        @./physics.usda@
+    ]
+    upAxis = "Z"
+)
+
+over "tn__robotiq3fgripper_articulated_ff0A"
+{
+    over "Physics"
+    {
+        def MjcActuator "finger_1_joint_1_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_1_joint_1>
+        }
+
+        def MjcActuator "finger_1_joint_2_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_1_joint_2>
+        }
+
+        def MjcActuator "finger_1_joint_3_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_1_joint_3>
+        }
+
+        def MjcActuator "finger_2_joint_1_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_2_joint_1>
+        }
+
+        def MjcActuator "finger_2_joint_2_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_2_joint_2>
+        }
+
+        def MjcActuator "finger_2_joint_3_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_2_joint_3>
+        }
+
+        def MjcActuator "finger_middle_joint_1_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_middle_joint_1>
+        }
+
+        def MjcActuator "finger_middle_joint_2_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_middle_joint_2>
+        }
+
+        def MjcActuator "finger_middle_joint_3_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/finger_middle_joint_3>
+        }
+
+        def MjcActuator "palm_finger_1_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/palm_finger_1_joint>
+        }
+
+        def MjcActuator "palm_finger_2_joint_actuator"
+        {
+            uniform double mjc:forceRange:max = 100
+            uniform double mjc:forceRange:min = -100
+            custom rel mjc:target
+            prepend rel mjc:target = </tn__robotiq3fgripper_articulated_ff0A/Physics/palm_finger_2_joint>
+        }
+
+        over "root_joint"
+        {
+        }
+
+        over "finger_1_joint_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_1_joint_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_1_joint_3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_2_joint_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_2_joint_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_2_joint_3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_middle_joint_1" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_middle_joint_2" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "finger_middle_joint_3" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "palm_finger_1_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "palm_finger_2_joint" (
+            delete apiSchemas = ["PhysicsDriveAPI:angular", "PhysicsJointStateAPI:angular"]
+        )
+        {
+        }
+
+        over "palm_finger_middle_joint"
+        {
+        }
+    }
+
+    over "Geometry"
+    {
+        over "palm"
+        {
+            over "finger_1_link_0"
+            {
+                over "finger_1_link_1"
+                {
+                    over "finger_1_link_2"
+                    {
+                        over "finger_1_link_3"
+                        {
+                            over "link_3"
+                            {
+                            }
+
+                            over "link_3_1"
+                            {
+                            }
+                        }
+
+                        over "link_2"
+                        {
+                        }
+
+                        over "link_2_1"
+                        {
+                        }
+                    }
+
+                    over "link_1"
+                    {
+                    }
+
+                    over "link_1_1"
+                    {
+                    }
+                }
+
+                over "link_0"
+                {
+                }
+
+                over "link_0_1"
+                {
+                }
+            }
+
+            over "finger_2_link_0"
+            {
+                over "finger_2_link_1"
+                {
+                    over "finger_2_link_2"
+                    {
+                        over "finger_2_link_3"
+                        {
+                            over "link_3"
+                            {
+                            }
+
+                            over "link_3_1"
+                            {
+                            }
+                        }
+
+                        over "link_2"
+                        {
+                        }
+
+                        over "link_2_1"
+                        {
+                        }
+                    }
+
+                    over "link_1"
+                    {
+                    }
+
+                    over "link_1_1"
+                    {
+                    }
+                }
+
+                over "link_0"
+                {
+                }
+
+                over "link_0_1"
+                {
+                }
+            }
+
+            over "finger_middle_link_0"
+            {
+                over "finger_middle_link_1"
+                {
+                    over "finger_middle_link_2"
+                    {
+                        over "finger_middle_link_3"
+                        {
+                            over "link_3"
+                            {
+                            }
+
+                            over "link_3_1"
+                            {
+                            }
+                        }
+
+                        over "link_2"
+                        {
+                        }
+
+                        over "link_2_1"
+                        {
+                        }
+                    }
+
+                    over "link_1"
+                    {
+                    }
+
+                    over "link_1_1"
+                    {
+                    }
+                }
+
+                over "link_0"
+                {
+                }
+
+                over "link_0_1"
+                {
+                }
+            }
+
+            over "palm"
+            {
+            }
+
+            over "palm_1"
+            {
+            }
+        }
+    }
+
+    over "Materials"
+    {
+    }
+
+    over "VisualMaterials"
+    {
+    }
+}
+

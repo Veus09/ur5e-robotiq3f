@@ -1,0 +1,239 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "URDF USD Converter v0.1.2"
+    }
+    doc = """Generated from Composed Stage of root layer /tmp/tmp0l7r4aod/robotiq-3f-gripper_articulated.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq-3f-gripper_articulated_l3z4jvxp/usdex_robotiq-3f-gripper_articulated/robotiq-3f-gripper_articulated.usdc
+
+
+Generated from Composed Stage of root layer /tmp/urdf_import_robotiq-3f-gripper_articulated_l3z4jvxp/temp_robotiq-3f-gripper_articulated/robotiq-3f-gripper_articulated.usd
+
+
+Generated from Composed Stage of root layer /home/vuonggia/robotiq-3f-gripper_articulated/payloads/base.usd
+"""
+    kilogramsPerUnit = 1
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Scope "Instances"
+{
+    def Xform "palm" (
+        prepend references = @./geometries.usd@</Geometries/palm>
+    )
+    {
+        over "palm" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/palm/VisualMaterials/Material_001_4>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "Material_001_4" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/Material_001_4>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "link_0" (
+        prepend references = @./geometries.usd@</Geometries/link_0>
+    )
+    {
+        over "link_0" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/link_0/VisualMaterials/Material_001>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "Material_001" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/Material_001_4>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "link_1" (
+        prepend references = @./geometries.usd@</Geometries/link_1>
+    )
+    {
+        over "link_1" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/link_1/VisualMaterials/Material_001_1>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "Material_001_1" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/Material_001_1>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "link_2" (
+        prepend references = @./geometries.usd@</Geometries/link_2>
+    )
+    {
+        over "link_2" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/link_2/VisualMaterials/Material_001_2>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "Material_001_2" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/Material_001_4>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "link_3" (
+        prepend references = @./geometries.usd@</Geometries/link_3>
+    )
+    {
+        over "link_3" (
+            apiSchemas = ["MaterialBindingAPI"]
+        )
+        {
+            custom rel material:binding
+            prepend rel material:binding = </Instances/link_3/VisualMaterials/Material_001_3>
+        }
+
+        def Scope "VisualMaterials"
+        {
+            def Material "Material_001_3" (
+                instanceable = true
+                prepend references = @./materials.usda@</Materials/Material_001_4>
+            )
+            {
+            }
+        }
+    }
+
+    def Xform "link_3_1" (
+        prepend references = @./geometries.usd@</Geometries/link_3_1>
+    )
+    {
+        over "link_3_1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+
+            def Scope "material"
+            {
+                custom string urdf:name = "yellow"
+            }
+        }
+    }
+
+    def Xform "link_2_1" (
+        prepend references = @./geometries.usd@</Geometries/link_2_1>
+    )
+    {
+        over "link_2_1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+
+            def Scope "material"
+            {
+                custom string urdf:name = "yellow"
+            }
+        }
+    }
+
+    def Xform "link_1_1" (
+        prepend references = @./geometries.usd@</Geometries/link_1_1>
+    )
+    {
+        over "link_1_1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+
+            def Scope "material"
+            {
+                custom string urdf:name = "yellow"
+            }
+        }
+    }
+
+    def Xform "link_0_1" (
+        prepend references = @./geometries.usd@</Geometries/link_0_1>
+    )
+    {
+        over "link_0_1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+
+            def Scope "material"
+            {
+                custom string urdf:name = "yellow"
+
+                def Scope "color"
+                {
+                    custom string urdf:rgba = "0 1 1 1"
+                }
+            }
+        }
+    }
+
+    def Xform "palm_1" (
+        prepend references = @./geometries.usd@</Geometries/palm_1>
+    )
+    {
+        over "palm_1" (
+            apiSchemas = ["PhysicsCollisionAPI", "NewtonCollisionAPI", "PhysicsMeshCollisionAPI", "NewtonMeshCollisionAPI"]
+        )
+        {
+            token physics:approximation = "convexHull"
+            token purpose = "guide"
+
+            def Scope "material"
+            {
+                custom string urdf:name = "yellow"
+
+                def Scope "color"
+                {
+                    custom string urdf:rgba = "0 1 1 1"
+                }
+            }
+        }
+    }
+}
+
