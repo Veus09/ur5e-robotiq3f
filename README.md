@@ -2,7 +2,7 @@
 
 Asset robot UR5e được tích hợp với gripper Robotiq 3F, dùng cho mô phỏng thao tác **pick and place** trong NVIDIA Isaac Sim.
 
-Repo này cung cấp model USD, mesh, URDF/XRDF và cấu hình RMPflow để dùng làm robot tùy chỉnh trong các ví dụ motion planning của Isaac Sim.
+Repo này cung cấp model USD, mesh, URDF/XRDF và cấu hình RMPflow để dùng làm robot tùy chỉnh trong các ví dụ motion planning của Isaac Sim. Ngoài ra repo còn có bộ **embodiment + policy cho Isaac Lab-Arena** để chạy robot này bằng IK trong các benchmark gắp-đặt và mở cửa tủ lạnh/microwave (xem phần [Isaac Lab-Arena](#isaac-lab-arena)).
 
 ## Nội dung repo
 
@@ -14,6 +14,19 @@ ur/
 ├── rmp_flow.yaml           # Tham số cuMotion RMPflow
 ├── meshes/                 # Mesh và material của UR5e
 └── payloads/               # USD payload, physics, materials, gripper
+
+arena/                      # Tích hợp Isaac Lab-Arena (không sửa code Arena)
+├── run_arena.py            # Chạy policy_runner của Arena với embodiment UR5e đã đăng ký
+├── envs/                   # Môi trường YAML mở tủ đông / microwave cho UR5e
+└── ur5e_arena/
+    ├── embodiment.py                  # ur5e_3f_ik, ur5e_3f_ik_abs, ur5e_3f_joint_pos
+    ├── scripted_pick_place_policy.py  # Gắp-đặt bằng IK tuyệt đối (state machine 8 pha)
+    ├── scripted_open_door_policy.py   # Mở cửa tủ lạnh/tủ đông/microwave bằng IK
+    └── keyboard_teleop_policy.py      # Teleop bàn phím (IK tương đối)
+
+scripts/
+├── pick_box_table.py       # Ví dụ gắp hộp trên Isaac Sim
+└── run_and_record.sh       # Chạy lệnh trong GUI và quay màn hình bằng ffmpeg
 ```
 
 ### Cấu hình robot
@@ -138,13 +151,57 @@ Workflow tương ứng với Tutorial 9 của Isaac Sim:
 
 Nên kiểm tra từng phase bằng target Cartesian riêng trước khi ghép thành state machine hoàn chỉnh. Khi bật obstacle avoidance, đăng ký mặt bàn và các vật cản vào world interface của cuMotion.
 
+## Isaac Lab-Arena
+
+Tích hợp UR5e + Robotiq 3F vào [Isaac Lab-Arena](https://github.com/isaac-sim/IsaacLab-Arena) (Isaac Sim 6.1, Isaac Lab 3) để chạy các workspace benchmark như gắp-đặt (LIBERO, RoboCasa, bàn gỗ, bếp) với cánh tay riêng, điều khiển bằng **IK**.
+
+Chức năng:
+
+- **3 embodiment** dùng được ở mọi môi trường Arena qua `--embodiment`: `ur5e_3f_ik` (IK tương đối), `ur5e_3f_ik_abs` (IK tuyệt đối, quaternion xyzw) và `ur5e_3f_joint_pos`. TCP nằm 0,19 m sau `wrist_3_link`; có bệ dưới `base_link` (`pedestal_height_m`).
+- **Policy gắp-đặt bằng IK**, đổi được vật và đích (chuối, táo, cam, cốc, Rubik... lên đĩa, bát, ngăn tủ).
+- **Policy mở cửa bằng IK**: tự đọc bản lề, trục bản lề và tay nắm từ stage, kẹp tay nắm và kéo theo cung tròn quanh bản lề; tự nhận chiều mở từ giới hạn khớp.
+- **Môi trường mở tủ đông và microwave** (`arena/envs/*.yaml`, dựa trên `kitchen_bench` của Arena).
+- **Teleop bàn phím** cho `ur5e_3f_ik` (cần `--viz kit`).
+- **Quay video** bằng `scripts/run_and_record.sh` (ffmpeg `x11grab`).
+
+Kết quả headless (số episode thành công theo `success_rate` của Arena): gắp-đặt trên bàn gỗ đa số 3/3-5/5 (riêng `apple_01` 0/3 do asset bị scale 0,01); mở tủ đông 7/8 (2/2 và 5/6); mở microwave 3/3.
+
+Cài Arena và chạy (Arena nằm ngoài repo này, ví dụ `~/IsaacLab-Arena`, cài bằng `uv sync --extra dev`):
+
+```bash
+cd ~/IsaacLab-Arena && source .venv/bin/activate
+export OMNI_KIT_ACCEPT_EULA=YES ACCEPT_EULA=Y
+
+# Gắp chuối đặt lên đĩa
+python /path/to/ur5e-robotiq3f/arena/run_arena.py --viz kit \
+  --policy_type ur5e_arena.scripted_pick_place_policy.Ur5eScriptedPickPlacePolicy --num_episodes 3 \
+  pick_and_place_maple_table --embodiment ur5e_3f_ik_abs \
+  --pick_up_object banana_ycb_robolab --destination_location plate_large_vomp_robolab
+
+# Mở cửa tủ đông
+python /path/to/ur5e-robotiq3f/arena/run_arena.py --viz kit \
+  --policy_type ur5e_arena.scripted_open_door_policy.Ur5eScriptedOpenDoorPolicy --num_episodes 3 \
+  --env_spec /path/to/ur5e-robotiq3f/arena/envs/open_freezer_ur5e.yaml
+
+# Mở microwave
+python /path/to/ur5e-robotiq3f/arena/run_arena.py --viz kit \
+  --policy_type ur5e_arena.scripted_open_door_policy.Ur5eScriptedOpenDoorPolicy --num_episodes 3 \
+  --ik_door_asset microwave --ik_door_joint microjoint \
+  --env_spec /path/to/ur5e-robotiq3f/arena/envs/open_microwave_ur5e.yaml
+```
+
+Quay màn hình khi chạy: `scripts/run_and_record.sh out.mp4 <lệnh chạy ở trên>` (cần phiên X11 và ffmpeg). `--record_viewport_video` của Arena không dùng được với `--viz kit`.
+
+Ghi chú: module `ur5e_arena` đọc `ur.usda` ở `ur/` của repo này (đổi bằng biến môi trường `UR5E_ROBOT_DIR`) và USD ghép tự động được cache trong `~/.cache/isaaclab_arena/usd/ur5e_3f/`.
+
 ## Tham khảo chính thức
 
 - [Isaac Sim 6.0 - Tutorial 9: Pick and Place Example](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/robot_setup_tutorials/tutorial_pickplace_example.html)
 - [Isaac Sim 6.0 - Setup a Manipulator](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/robot_setup_tutorials/tutorial_import_assemble_manipulator.html)
 - [Isaac Sim 6.0 - Configure a Manipulator](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/robot_setup_tutorials/tutorial_configure_manipulator.html)
 - [Isaac Sim 6.0 - Generate Robot Configuration](https://docs.isaacsim.omniverse.nvidia.com/6.0.0/robot_setup_tutorials/tutorial_generate_robot_config.html)
+- [Isaac Lab-Arena](https://github.com/isaac-sim/IsaacLab-Arena)
 
 ## Ghi chú
 
-Repo hiện tập trung vào asset và robot configuration. Các script state machine pick-and-place cần được chạy từ bộ ví dụ Isaac Sim hoặc đặt trong một project riêng, sau đó trỏ tới thư mục `ur` bằng `--xrdf-dir`.
+Repo gồm asset, robot configuration và tích hợp Isaac Lab-Arena. Với Isaac Sim thuần, các script state machine pick-and-place cần được chạy từ bộ ví dụ Isaac Sim hoặc đặt trong một project riêng, sau đó trỏ tới thư mục `ur` bằng `--xrdf-dir`.

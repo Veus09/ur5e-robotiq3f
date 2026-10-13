@@ -1,0 +1,59 @@
+# Copyright (c) 2026, The Isaac Lab Arena Project Developers (https://github.com/isaac-sim/IsaacLab-Arena/blob/main/CONTRIBUTORS.md).
+# All rights reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+env_name: ur5e_open_freezer_g_shaped_large_scandinavian
+embodiment:
+  id: ur5e
+  registry_name: ur5e_3f_ik_abs
+  params:
+    pedestal_height_m: 0.8
+background:
+  id: kitchen
+  registry_name: lightwheel_kitchen_g_shaped_large_scandinavian
+  params:
+    collision_mode: mesh
+    repair_collision_mesh_non_watertight: false
+objects: []
+object_references:
+- id: floor
+  parent_id: kitchen
+  prim_path: floor_room/geometry
+  object_type: base
+  params: {}
+- id: fridge
+  parent_id: kitchen
+  prim_path: fridge_right_group
+  object_type: articulation
+  params:
+    openable_joint_name: freezer_door_joint
+relations:
+- kind: is_anchor
+  subject: floor
+  params: {}
+- kind: is_anchor
+  subject: fridge
+  params: {}
+- kind: 'on'
+  subject: ur5e
+  reference: floor
+  params: {}
+- kind: at_position
+  subject: ur5e
+  params:
+    x: 4.6
+    y: -1.675
+- kind: rotate_around_solution
+  subject: ur5e
+  params:
+    yaw_rad: 0.0
+task:
+  composition: atomic
+  description: Open the freezer right door.
+  subtasks:
+  - kind: OpenDoorTask
+    params:
+      openable_object: fridge
+      openness_threshold: 0.4
+      reset_openness: 0.0
